@@ -7,10 +7,10 @@ const cartsRoutes = require('../routers/carts/cart.routes');
 const logger = require("../logger/logger")
 const requestLogger = require("../middlewares/requestLogger")
 const path = require('path');
-const Products = require('../models/products.mongo');
+const { ProductsDao } = require("../models/daos/app.daos");
 const infoRoutes = require("./info/info.routes")
 
-const ProductsModel = new Products()
+const ProductsModel = new ProductsDao()
 
 router.use('/auth', requestLogger, authRoutes)
 router.use('/products', requestLogger, productsRoutes)

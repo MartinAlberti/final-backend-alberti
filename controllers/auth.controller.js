@@ -1,11 +1,12 @@
 const bcrypt = require('bcrypt');
 const { getAge, validateEmail, sendEmail } = require('../utils/utils')
 const passport = require('passport')
-const Users = require('../models/daos/users/usersDao.mongo');
+const { UserDao } = require('../models/daos/app.daos');
 const multer = require('multer');
 const envConfig = require('../config');
-const UsersModel = new Users();
 const { CartsDao } = require('../models/daos/app.daos')
+
+const UsersModel = new UserDao();
 
 const cartsDao = new CartsDao();
 

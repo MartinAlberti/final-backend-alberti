@@ -1,4 +1,4 @@
-const Products = require("./models/products.mongo");
+const { ProductsDao } = require("./models/daos/app.daos");
 const Messages = require("./models/messages");
 const { formatMessage, formatUser } = require("./utils/utils");
 const dbConfig = require("./db/config");
@@ -69,7 +69,7 @@ if (argv.mode === "CLUSTER" && cluster.isPrimary) {
     cluster.fork();
   }
 } else {
-  const ProductsModel = new Products();
+  const ProductsModel = new ProductsDao();
   let messages = new Messages("messages", dbConfig.sqlite);
 
   const serverConnected = httpServer.listen(PORT, () => {
