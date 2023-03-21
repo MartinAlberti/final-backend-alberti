@@ -4,6 +4,7 @@ dotenv.config();
 module.exports = {
   NODE_ENV: process.env.NODE_ENV || "development",
   DB_PASSWORD: process.env.DB_PASSWORD,
+  MONGOHOST: process.env.MONGOHOST,
   DATASOURCE: process.env.DATASOURCE || "mongo",
   ACCOUNT_SID: process.env.ACCOUNT_SID,
   AUTH_TOKEN: process.env.AUTH_TOKEN,
