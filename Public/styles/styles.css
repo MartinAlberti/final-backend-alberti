@@ -1,3 +1,6 @@
+a{
+  text-decoration: none;
+}
 .products-div {
   display: flex;
   flex-wrap: wrap;
@@ -10,6 +13,7 @@
 }
 .card {
   margin-top: 5%;
+  padding-top: 2%;
 }
 .nav-bar {
   display: flex;
@@ -19,6 +23,7 @@
 }
 .img-thumbnail{
     margin-right: 2%;
+    border: none;
 }
 #logout-form {
   width: fit-content;
@@ -35,4 +40,12 @@ margin-top: 40px;
 }
 .catButton{
     width: 100px;
+}
+#checkout-btn{
+  width: 100%;
+}
+
+.btn-add-to-cart:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }

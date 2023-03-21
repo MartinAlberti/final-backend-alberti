@@ -46,7 +46,7 @@ app.use(
     }),
     rolling: true,
     cookie: {
-      maxAge: 60000,
+      maxAge: 600000,
     },
   })
 );

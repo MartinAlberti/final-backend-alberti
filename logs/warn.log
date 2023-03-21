@@ -191,3 +191,6 @@
 {"level":40,"time":1679410051044,"pid":14116,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
 {"level":40,"time":1679410111532,"pid":14116,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
 {"level":40,"time":1679410173633,"pid":14116,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
+{"level":40,"time":1679411079252,"pid":8252,"hostname":"DESKTOP-IO5QHLD","msg":"/carts/styles/styles.css method:GET not found"}
+{"level":40,"time":1679412011694,"pid":8252,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
+{"level":40,"time":1679413750323,"pid":9384,"hostname":"DESKTOP-IO5QHLD","msg":"/auth/index.js method:GET not found"}
