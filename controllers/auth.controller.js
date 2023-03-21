@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt');
 const { getAge, validateEmail, sendEmail } = require('../utils/utils')
 const passport = require('passport')
-const Users = require('../models/user.mongo');
+const Users = require('../models/daos/users/usersDao.mongo');
 const multer = require('multer');
 const envConfig = require('../config');
 const UsersModel = new Users();

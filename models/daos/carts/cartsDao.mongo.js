@@ -2,10 +2,10 @@ const mongoContainer = require('../../containers/mongo.container')
 const { Schema } = require('mongoose')
 const { HttpError } = require('../../../utils/utils')
 const { HTTP_STATUS } = require('../../../constants/api.constants')
-const productsDao = require('../products/productsDao.mongo')
+const ProductsDao = require('../products/productsDao.mongo')
 const cartSchema = require("../../schemas/Cart.schema")
 
-// const productsDao = new Products();
+const productsDao = new ProductsDao();
 
 
 const collection = 'carts'

@@ -1,8 +1,8 @@
 const { HTTP_STATUS } = require("../constants/api.constants");
-const Products = require("../models/products.mongo");
+const { ProductsDao } = require("../models/daos/app.daos");
 const { successResponse, errorResponse } = require("../utils/utils");
 
-const productsDao = new Products();
+const productsDao = new ProductsDao();
 
 class ProductsController {
 

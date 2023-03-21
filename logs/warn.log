@@ -187,3 +187,7 @@
 {"level":40,"time":1679407601393,"pid":6232,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
 {"level":40,"time":1679407614502,"pid":6232,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
 {"level":40,"time":1679407923029,"pid":6232,"hostname":"DESKTOP-IO5QHLD","msg":"/auth/index.js method:GET not found"}
+{"level":40,"time":1679409825196,"pid":14116,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
+{"level":40,"time":1679410051044,"pid":14116,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
+{"level":40,"time":1679410111532,"pid":14116,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}
+{"level":40,"time":1679410173633,"pid":14116,"hostname":"DESKTOP-IO5QHLD","msg":"/admin.js method:GET not found"}

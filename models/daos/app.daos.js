@@ -5,7 +5,7 @@ let CartsDao;
 
 switch (envConfig.DATASOURCE) {
     case 'mongo':
-        ProductsDao = require('../products.mongo')
+        ProductsDao = require('./products/productsDao.mongo')
         CartsDao = require('./carts/cartsDao.mongo')
 
         break;

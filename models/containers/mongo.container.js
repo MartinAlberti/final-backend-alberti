@@ -30,6 +30,14 @@ class MongoContainer {
     }
     return document;
   }
+  async getByCategory(category) {
+    const documents = await this.model.find({ category: category }, { __v: 0 }).lean();
+    if (!documents) {
+        const message = `Resource with id ${id} does not exist in our records`;
+        throw new HttpError(HTTP_STATUS.NOT_FOUND, message);
+    }
+    return documents;
+}
 
   async save(item) {
     const newDocument = new this.model(item);

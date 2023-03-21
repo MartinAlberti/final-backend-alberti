@@ -10,4 +10,4 @@ class Products extends mongoContainer {
 
 }
 
-module.exports = new Products();
+module.exports =  Products;
