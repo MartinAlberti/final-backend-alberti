@@ -2,7 +2,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 module.exports = {
-  NODE_ENV: process.env.NODE_ENV || "development",
+  NODE_ENV: process.env.NODE_ENV ,
   DB_PASSWORD: process.env.DB_PASSWORD,
   MONGOHOST: process.env.MONGOHOST,
   DATASOURCE: process.env.DATASOURCE || "mongo",
