@@ -1,7 +1,7 @@
 const { ProductsDao } = require("./models/daos/app.daos");
-const Messages = require("./models/messages");
-const { formatMessage, formatUser } = require("./utils/utils");
-const dbConfig = require("./db/config");
+// const Messages = require("./models/messages");
+// const { formatMessage, formatUser } = require("./utils/utils");
+// const dbConfig = require("./db/config");
 const envConfig = require("./config");
 const session = require("express-session");
 const express = require("express");
@@ -70,7 +70,7 @@ if (argv.mode === "CLUSTER" && cluster.isPrimary) {
   }
 } else {
   const ProductsModel = new ProductsDao();
-  let messages = new Messages("messages", dbConfig.sqlite);
+  // let messages = new Messages("messages", dbConfig.sqlite);
 
   const serverConnected = httpServer.listen(PORT, () => {
     ProductsModel.connect().then(() => {
@@ -83,46 +83,46 @@ if (argv.mode === "CLUSTER" && cluster.isPrimary) {
     console.log(error.message);
   });
 
-  const users = [];
+  // const users = [];
 
-  io.on("connection", (socket) => {
-    console.log("New client connection");
+  // io.on("connection", (socket) => {
+  //   console.log("New client connection");
 
-    ProductsModel.getAll().then((data) =>
-      socket.emit("products-history", data)
-    );
+  //   ProductsModel.getAll().then((data) =>
+  //     socket.emit("products-history", data)
+  //   );
 
-    socket.on("newProduct", (newProduct) => {
-      ProductsModel.save(newProduct).then(
-        ProductsModel.getAll().then((data) =>
-          io.sockets.emit("products-history", data)
-        )
-      );
-    });
+  //   socket.on("newProduct", (newProduct) => {
+  //     ProductsModel.save(newProduct).then(
+  //       ProductsModel.getAll().then((data) =>
+  //         io.sockets.emit("products-history", data)
+  //       )
+  //     );
+  //   });
 
-    socket.on("join-chat", (email) => {
-      let newUser = {
-        id: socket.id,
-        email,
-      };
+  //   socket.on("join-chat", (email) => {
+  //     let newUser = {
+  //       id: socket.id,
+  //       email,
+  //     };
 
-      users.push(newUser);
-    });
+  //     users.push(newUser);
+  //   });
 
-    messages.getAll().then((data) => socket.emit("messages", data));
+  //   messages.getAll().then((data) => socket.emit("messages", data));
 
-    socket.on("new-message", (data) => {
-      const author = users.find((user) => user.id === socket.id);
-      let message = formatMessage(author.email, data);
-      messages.newMessage(message);
-      messages
-        .getAll()
-        .then(data)
-        .then((msg) => {
-          io.emit("messages", msg);
-        });
-    });
-  });
+  //   socket.on("new-message", (data) => {
+  //     const author = users.find((user) => user.id === socket.id);
+  //     let message = formatMessage(author.email, data);
+  //     messages.newMessage(message);
+  //     messages
+  //       .getAll()
+  //       .then(data)
+  //       .then((msg) => {
+  //         io.emit("messages", msg);
+  //       });
+  //   });
+  // });
 }
 
 
